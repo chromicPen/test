@@ -1,0 +1,96 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+.wheel {
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    position: relative;
+}
+
+.segment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    border: 2px solid #ccc;
+}
+
+#spinButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.segment:nth-child(1) { grid-area: 1 / 1 / 2 / 2; }
+.segment:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
+.segment:nth-child(3) { grid-area: 1 / 3 / 2 / 4; }
+.segment:nth-child(4) { grid-area: 1 / 4 / 2 / 5; }
+.segment:nth-child(5) { grid-area: 1 / 5 / 2 / 6; }
+.segment:nth-child(6) { grid-area: 2 / 5 / 3 / 6; }
+.segment:nth-child(7) { grid-area: 3 / 5 / 4 / 6; }
+.segment:nth-child(8) { grid-area: 4 / 5 / 5 / 6; }
+.segment:nth-child(9) { grid-area: 5 / 5 / 6 / 6; }
+.segment:nth-child(10) { grid-area: 5 / 4 / 6 / 5; }
+.segment:nth-child(11) { grid-area: 5 / 3 / 6 / 4; }
+.segment:nth-child(12) { grid-area: 5 / 2 / 6 / 3; }
+.segment:nth-child(13) { grid-area: 5 / 1 / 6 / 2; }
+.segment:nth-child(14) { grid-area: 4 / 1 / 5 / 2; }
+.segment:nth-child(15) { grid-area: 3 / 1 / 4 / 2; }
+.segment:nth-child(16) { grid-area: 2 / 1 / 3 / 2; }
+.segment:nth-child(17) { grid-area: 2 / 2 / 3 / 3; }
+.segment:nth-child(18) { grid-area: 2 / 3 / 3 / 4; }
+.segment:nth-child(19) { grid-area: 2 / 4 / 3 / 5; }
+.segment:nth-child(20) { grid-area: 3 / 4 / 4 / 5; }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
